@@ -11,6 +11,7 @@ class AligoTextMessage
     public $content;
     public $type;
     public $to;
+    public $title;
     public $debug;
 
     /**
@@ -66,6 +67,19 @@ class AligoTextMessage
     public function to($to)
     {
         $this->to = $to;
+
+        return $this;
+    }
+
+    /**
+     * Set the title for LMS messages.
+     *
+     * @param  string  $title
+     * @return $this
+     */
+    public function title($title)
+    {
+        $this->title = $title;
 
         return $this;
     }

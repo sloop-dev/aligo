@@ -40,6 +40,9 @@ class AligoTextClient
             'receiver' => $message->to,
             'sender' => $this->smsFrom,
         ];
+        if ($message->title) {
+            $payload['title'] = $message->title;
+        }
         if ($message->debug) {
             $payload = array_merge([
                 'testmode_yn' => 'Y'
